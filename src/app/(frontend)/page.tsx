@@ -149,6 +149,8 @@ export default function Example() {
         throw new Error('Failed to fetch posts')
       }
       const data = await res.json()
+      console.log(data.docs)
+
       setPosts(data.docs) // Assurez-vous que "docs" est correct en fonction de votre réponse API
     } catch (error) {
       console.error(error)
@@ -279,7 +281,7 @@ export default function Example() {
                 </h1>
                 <div>
                   <h2>Voici les Posts</h2>
-                  <ul>
+                  {/* <ul>
                     {posts.map((post, index) => {
                       return (
                         <li key={post.id}>
@@ -287,7 +289,7 @@ export default function Example() {
                         </li>
                       )
                     })}
-                  </ul>
+                  </ul> */}
                 </div>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
