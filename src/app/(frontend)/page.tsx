@@ -150,6 +150,7 @@ export default function Example() {
       }
       const data = await res.json()
       console.log(data.docs)
+      console.log(`${process.env.NEXT_PUBLIC_PAYLOAD_PUBLIC_SERVER_URL}/api/posts`)
 
       setPosts(data.docs) // Assurez-vous que "docs" est correct en fonction de votre réponse API
     } catch (error) {
