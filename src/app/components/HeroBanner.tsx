@@ -1,11 +1,8 @@
-import { Navigation } from '@/app/components/Navigation'
 import Image from 'next/image'
 
 export const Herobanner = () => {
   return (
     <div className="bg-gray-900">
-      <Navigation />
-
       <div className="relative isolate overflow-hidden pt-14">
         <Image
           width={100}

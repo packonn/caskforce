@@ -1,5 +1,6 @@
+import '../../../globals.css'
+import { Navigation } from '../components/Navigation'
 import { LanguageProvider } from '../contexts/LanguageContext'
-
 export const metadata = {
   title: 'Cask Force',
   description:
@@ -10,7 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <LanguageProvider>
-        <body>{children}</body>
+        <body>
+          <Navigation />
+          {children}
+        </body>
       </LanguageProvider>
     </html>
   )

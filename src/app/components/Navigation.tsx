@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useLanguage } from '../contexts/LanguageContext'
+
 interface NavigationItem {
   id: string
   link: Link
@@ -46,7 +47,6 @@ export const Navigation = () => {
   const fetchHeaderNav = async () => {
     const res = await fetch('/api/globals/header')
     const data = await res.json()
-    console.log(data)
 
     setNavigations(data.navItems)
   }
@@ -81,7 +81,7 @@ export const Navigation = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigations.map((item) => (
+          {navigations?.map((item) => (
             <a
               key={item.id}
               href={item.link.url}
@@ -123,7 +123,7 @@ export const Navigation = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/25">
               <div className="space-y-2 py-6">
-                {navigations.map((item) => (
+                {navigations?.map((item) => (
                   <a
                     key={item.id}
                     href={item.link.url}
@@ -145,6 +145,15 @@ export const Navigation = () => {
           </div>
         </DialogPanel>
       </Dialog>
+      <button
+        className="text-white bg-red-800 rounded-full w-10 h-10"
+        onClick={() => {
+          if (lang === 'fr') setLang('en')
+          else setLang('fr')
+        }}
+      >
+        {lang}
+      </button>
     </header>
   )
 }
