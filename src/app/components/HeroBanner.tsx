@@ -1,4 +1,4 @@
-import { Navigation } from '@/app/components/containers/Navigation'
+import { Navigation } from '@/app/components/Navigation'
 import Image from 'next/image'
 
 export const Herobanner = () => {

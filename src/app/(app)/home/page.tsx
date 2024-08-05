@@ -1,4 +1,4 @@
-import { Herobanner } from './HeroBanner'
+import { Herobanner } from '@/app/components/HeroBanner'
 
 export const Home = () => {
   return (
