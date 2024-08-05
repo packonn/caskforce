@@ -1,10 +1,4 @@
-'use client'
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  label: string
-  onClick: () => void
-  className?: string
-  [key: string]: any
-}
+import { ButtonProps } from '@/app/next-types'
 
 export const Button: React.FC<ButtonProps> = ({ label, onClick, className, ...props }) => {
   return (

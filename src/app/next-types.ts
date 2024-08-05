@@ -34,3 +34,27 @@ export interface ReferenceLink {
   label_fr: string
   label_en: string
 }
+
+export interface CardProps {
+  title: string
+  description: string
+  imageUrl: string
+  onClick?: () => void
+  className?: string
+  [key: string]: any
+}
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  label: string
+  onClick: () => void
+  className?: string
+  [key: string]: any
+}
+export interface InputProps {
+  label: string
+  type?: string
+  value?: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  placeholder?: string
+  className?: string
+  [key: string]: any
+}

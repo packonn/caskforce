@@ -1,12 +1,5 @@
-interface InputProps {
-  label: string
-  type?: string
-  value?: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  placeholder?: string
-  className?: string
-  [key: string]: any
-}
+import { InputProps } from '@/app/next-types'
+
 export const Input: React.FC<InputProps> = ({
   label,
   type = 'text',

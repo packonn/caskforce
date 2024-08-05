@@ -1,13 +1,5 @@
+import { CardProps } from '@/app/next-types'
 import Image from 'next/image'
-
-interface CardProps {
-  title: string
-  description: string
-  imageUrl: string
-  onClick?: () => void
-  className?: string
-  [key: string]: any
-}
 
 export const Card: React.FC<CardProps> = ({
   title,
