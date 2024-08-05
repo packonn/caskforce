@@ -1,59 +1,15 @@
 'use client'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useLanguage } from '../contexts/LanguageContext'
+import { NavigationProps } from '../next-types'
 
-interface NavigationItem {
-  id: string
-  link: Link
-}
-
-type Link = CustomLink | ReferenceLink
-
-interface CustomLink {
-  type: 'custom'
-  newTab: boolean
-  url: string
-  label_fr: string
-  label_en: string
-}
-
-interface ReferenceLink {
-  type: 'reference'
-  newTab: boolean | null
-  reference: {
-    relationTo: string
-    value: {
-      id: number
-      title: string
-      content: string
-      media: number
-      updatedAt: string
-      createdAt: string
-    }
-  }
-  url: string
-  label_fr: string
-  label_en: string
-}
-
-export const Navigation = () => {
+export const Navigation: React.FC<NavigationProps> = ({ navigations }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [navigations, setNavigations] = useState<NavigationItem[]>([])
+
   const { lang, setLang } = useLanguage()
-
-  const fetchHeaderNav = async () => {
-    const res = await fetch('/api/globals/header')
-    const data = await res.json()
-
-    setNavigations(data.navItems)
-  }
-
-  useEffect(() => {
-    fetchHeaderNav()
-  }, [])
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
