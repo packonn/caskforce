@@ -20,7 +20,10 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  globals: {};
+  globals: {
+    header: Header;
+    footer: Footer;
+  };
   locale: null;
   user: User & {
     collection: 'users';
@@ -86,6 +89,7 @@ export interface Post {
   id: number;
   title: string;
   content: string;
+  media: number | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -122,6 +126,56 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "header".
+ */
+export interface Header {
+  id: number;
+  navItems?:
+    | {
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'posts';
+            value: number | Post;
+          } | null;
+          url?: string | null;
+          label_fr: string;
+          label_en: string;
+        };
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: number;
+  navItems?:
+    | {
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'posts';
+            value: number | Post;
+          } | null;
+          url?: string | null;
+          label_fr: string;
+          label_en: string;
+        };
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

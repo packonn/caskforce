@@ -1,3 +1,5 @@
+import { LanguageProvider } from '../contexts/LanguageContext'
+
 export const metadata = {
   title: 'Cask Force',
   description:
@@ -7,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <LanguageProvider>
+        <body>{children}</body>
+      </LanguageProvider>
     </html>
   )
 }

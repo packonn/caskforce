@@ -16,5 +16,11 @@ export const Posts: CollectionConfig = {
       type: 'text',
       required: true,
     },
+    {
+      name: 'media',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
   ],
 }

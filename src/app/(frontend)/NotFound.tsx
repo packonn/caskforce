@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function NotFound() {
+export const NotFound = () => {
   return (
     <div className="container py-28">
       <div className="prose max-w-none">
