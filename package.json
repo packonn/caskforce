@@ -16,30 +16,32 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
-    "@payloadcms/db-postgres": "beta",
-    "@payloadcms/next": "beta",
-    "@payloadcms/plugin-cloud": "beta",
-    "@payloadcms/richtext-lexical": "beta",
+    "@payloadcms/db-postgres": "3.0.0-beta.74",
+    "@payloadcms/next": "3.0.0-beta.74",
+    "@payloadcms/plugin-cloud": "^3.0.1",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.74",
+    "@types/uuid": "^10.0.0",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
-    "graphql": "^16.8.1",
+    "graphql": "^16.9.0",
     "next": "15.0.0-canary.53",
-    "payload": "beta",
-    "react": "^19.0.0-rc-6230622a1a-20240610",
-    "react-dom": "^19.0.0-rc-6230622a1a-20240610",
-    "sharp": "0.32.6"
+    "payload": "3.0.0-beta.74",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
+    "sharp": "0.33.4",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
-    "@types/node": "^20.12.12",
+    "@types/node": "^22.1.0",
     "@types/react": "npm:types-react@19.0.0-rc.0",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.8.0",
     "eslint-config-next": "15.0.0-canary.53",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "tailwindcss": "^3.4.7",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0"

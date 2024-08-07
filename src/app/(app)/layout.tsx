@@ -1,4 +1,4 @@
-import '../../../globals.css'
+import '../globals.css'
 import { Navigation } from '../components/Navigation'
 import { LanguageProvider } from '../contexts/LanguageContext'
 export const metadata = {
@@ -8,14 +8,11 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const res = await fetch('http://localhost:3000/api/globals/header')
-  const { navItems } = await res.json()
-
   return (
     <html lang="fr">
       <LanguageProvider>
         <body>
-          <Navigation navigations={navItems} />
+          <Navigation />
           {children}
         </body>
       </LanguageProvider>

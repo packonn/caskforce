@@ -1,6 +1,3 @@
-export interface NavigationProps {
-  navigations: NavigationItem[]
-}
 export interface NavigationItem {
   id: string
   link: Link

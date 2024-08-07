@@ -1,0 +1,41 @@
+{
+  "navigations": [
+    {
+      "content_en": "Home",
+      "content_fr": "Accueil",
+      "href": "/home"
+    },
+    {
+      "content_en": "Our Expertise",
+      "content_fr": "Notre expertise",
+      "href": "/expertise"
+    },
+    {
+      "content_en": "Our Services",
+      "content_fr": "Nos services",
+      "href": "/services"
+    },
+    {
+      "content_en": "Our History",
+      "content_fr": "Notre histoire",
+      "href": "/history"
+    },
+    {
+      "content_en": "Our Products",
+      "content_fr": "Nos Produit",
+      "href": "/products"
+    }
+  ],
+  "hero_banner": {
+    "title_fr": "Titre section Banner",
+    "title_en": "Title Hero Banner",
+    "content_fr": "FR Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id suscipit magni magnam doloribus provident cumque! Quaerat, adipisci.",
+    "content_en": "EN Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id suscipit magni magnam doloribus provident cumque! Quaerat, adipisci."
+  },
+  "history": {
+    "title_fr": "Titre section History",
+    "title_en": "Title section History",
+    "content_fr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id suscipit a hic autem nam aspernatur totam praesentium modi fuga culpa possimus voluptates magni magnam doloribus provident cumque! Quaerat, adipisci.",
+    "content_en": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id suscipit a hic autem nam aspernatur totam praesentium modi fuga culpa possimus voluptates magni magnam doloribus provident cumque! Quaerat, adipisci."
+  }
+}
