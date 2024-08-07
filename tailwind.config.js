@@ -15,7 +15,8 @@ module.exports = {
         secondary: '#7e5bef',
       },
       fontFamily: {
-        sans: ['Spectral', 'sans-serif'],
+        sans: ['LibreBaskerville', 'sans-serif'],
+        title: ['Spectral', 'sans-serif'],
       },
     },
   },
